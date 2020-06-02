@@ -1,0 +1,14 @@
+<div class="card mb-3">
+  <div class="card-header p-2">
+    <label class="my-0"><input type="checkbox" [(ngModel)]="todotask.finished" (ngModelChange)="toggleFinished($event)"> {{todotask.task}}</label>
+  </div>
+  <div class="card-body p-2">
+    <p class="my-0" [ngClass]="{'text-warning': !todotask.finished, 'text-success': todotask.finished}">
+        {{todotask.finished ? 'Finished' : 'Pending'}}
+    </p>
+    <p class="my-0">{{todotask.task_description}}</p>
+    <p class="my-0">
+      <a href="javascript:void(0)" class="text-primary" (click)="doUpdate()">update</a> &bull; <a href="javascript:void(0)" class="text-danger" (click)="doDelete()">delete</a>
+    </p>
+  </div>
+</div>

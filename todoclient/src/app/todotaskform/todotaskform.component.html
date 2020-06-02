@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+
+
+    <div class="col-12">
+      <h2>Add / update to-do task</h2>
+    </div>
+    <div class="col-12 form-group">
+      <input [(ngModel)]="todotask.task" class="form-control" placeholder="To-do task" />
+    </div>
+    <div class="col-12 form-group">
+      <textarea [(ngModel)]="todotask.task_description" rows="7" class="form-control" placeholder="To-do task description"></textarea>
+    </div>
+    <div class="col-12 form-group">
+      <a href="javascript:void(0)" (click)="submitForm()" class="btn btn-success">Save</a> <a routerLink="/" class="btn btn-danger ml-2">Cancel</a>
+    </div>
+
+  </div>
+</div>

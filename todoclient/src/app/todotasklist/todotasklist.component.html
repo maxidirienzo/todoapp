@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-12 mb-4">
+      <h1>Welcome to your to-do list</h1>
+      <a routerLink="/add" class="btn btn-success">Add new to-do task</a>
+    </div>
+  </div>
+
+  <div class="row" *ngFor="let todotask of todotasks">
+    <div class="col-12">
+      <app-todotask [todotask]="todotask" (onToggleFinished)="toggleFinished(todotask)" (onDelete)="onDelete(todotask)" (onUpdate)="onUpdate(todotask)"></app-todotask>
+    </div>
+  </div>
+</div>
